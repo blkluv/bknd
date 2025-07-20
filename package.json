@@ -8,7 +8,8 @@
     "ci": "find . -name 'node_modules' -type d -exec rm -rf {} + && bun install",
     "npm:local": "verdaccio --config verdaccio.yml",
     "format": "bunx biome format --write ./app",
-    "lint": "bunx biome lint --changed ./app"
+    "lint": "bunx biome lint --changed ./app",
+    "build": "vite build"
   },
   "dependencies": {},
   "devDependencies": {
@@ -18,10 +19,11 @@
     "bun-types": "^1.1.18",
     "miniflare": "^3.20240806.0",
     "typescript": "^5.5.3",
-    "verdaccio": "^5.32.1"
+    "verdaccio": "^5.32.1",
+    "vite": "^4.4.9"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=18"
   },
   "workspaces": ["app", "packages/*"]
 }
